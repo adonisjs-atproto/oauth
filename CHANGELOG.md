@@ -1,5 +1,15 @@
 # @adonisjs-atproto/oauth
 
+## 4.0.0
+
+### Major Changes
+
+- [#45](https://github.com/adonisjs-atproto/oauth/pull/45) [`fcc0c4a`](https://github.com/adonisjs-atproto/oauth/commit/fcc0c4a0320a347d19fd1550da8fc99790785d6d) Thanks [@ThisIsMissEm](https://github.com/ThisIsMissEm)! - Rename the package to the `@adonisjs-atproto` org scope: `@thisismissem/adonisjs-atproto-oauth` is now published as `@adonisjs-atproto/oauth`.
+
+  This is a breaking change. To upgrade:
+  - Replace the dependency `@thisismissem/adonisjs-atproto-oauth` with `@adonisjs-atproto/oauth` in your `package.json`.
+  - Update all imports, including subpath imports such as `@adonisjs-atproto/oauth/auth/provider` and the `@adonisjs-atproto/oauth/provider` provider registration in `adonisrc.ts`.
+
 ## 3.0.4
 
 ### Patch Changes
