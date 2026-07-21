@@ -20,7 +20,7 @@ import { stubsRoot } from './stubs/main.ts'
 type Packages = { name: string; isDevDependency: boolean }[]
 
 export async function configure(command: Configure) {
-  const packageName = '@thisismissem/adonisjs-atproto-oauth'
+  const packageName = '@adonisjs-atproto/oauth'
 
   const inertiaConfigPath = command.app.configPath('inertia.ts')
   const usingInertia = existsSync(inertiaConfigPath)
@@ -61,7 +61,7 @@ export async function configure(command: Configure) {
 
   // Add provider to rc file
   await codemods.updateRcFile((rcFile) => {
-    rcFile.addProvider('@thisismissem/adonisjs-atproto-oauth/provider')
+    rcFile.addProvider('@adonisjs-atproto/oauth/provider')
   })
 
   // Add migrations:
@@ -160,7 +160,7 @@ export async function configure(command: Configure) {
 }
 
 async function modifyAuthConfig(command: Configure, project: CodeTransformer['project']) {
-  const atprotoAuthProvider = '@thisismissem/adonisjs-atproto-oauth/auth/provider'
+  const atprotoAuthProvider = '@adonisjs-atproto/oauth/auth/provider'
   const authConfigPath = command.app.configPath('auth.ts')
   const action = command.logger.action(`update config/auth.ts`)
 

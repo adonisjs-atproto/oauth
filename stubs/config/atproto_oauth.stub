@@ -7,9 +7,9 @@ import {
   defineConfig,
   lucidSessionStore,
   lucidStateStore,
-} from '@thisismissem/adonisjs-atproto-oauth'
+} from '@adonisjs-atproto/oauth'
 {{#else}}
-import { defineConfig } from '@thisismissem/adonisjs-atproto-oauth'
+import { defineConfig } from '@adonisjs-atproto/oauth'
 {{/if}}
 import env from '#start/env'
 
