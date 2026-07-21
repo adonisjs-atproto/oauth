@@ -1,5 +1,5 @@
 {
-  "name": "@thisismissem/adonisjs-atproto-oauth",
+  "name": "@adonisjs-atproto/oauth",
   "description": "Adonis.js provider for doing AT Protocol OAuth logins",
   "version": "3.0.4",
   "engines": {
@@ -57,7 +57,7 @@
     }
   ],
   "repository": {
-    "url": "https://github.com/ThisIsMissEm/adonisjs-atproto-oauth"
+    "url": "https://github.com/adonisjs-atproto/oauth"
   },
   "dependencies": {
     "@poppinss/macroable": "^1.1.2",

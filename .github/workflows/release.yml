@@ -13,7 +13,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     environment: production
-    if: ${{ github.ref == 'refs/heads/main' && github.repository_owner == 'ThisIsMissEm' }}
+    if: ${{ github.ref == 'refs/heads/main' && github.repository_owner == 'adonisjs-atproto' }}
     permissions:
       id-token: write
       pull-requests: write

@@ -1,4 +1,4 @@
-# @thisismissem/adonisjs-atproto-oauth
+# @adonisjs-atproto/oauth
 
 ## 3.0.4
 

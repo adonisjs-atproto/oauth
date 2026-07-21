@@ -13,7 +13,7 @@ The following packages should already be installed and configured in your projec
 ## Installation
 
 ```sh
-node ace add @thisismissem/adonisjs-atproto-oauth
+node ace add @adonisjs-atproto/oauth
 ```
 
 ### Configuring
@@ -21,7 +21,7 @@ node ace add @thisismissem/adonisjs-atproto-oauth
 If you didn't use `node ace add` you can later run the configuration using:
 
 ```sh
-node ace configure @thisismissem/adonisjs-atproto-oauth
+node ace configure @adonisjs-atproto/oauth
 ```
 
 ### Next steps
@@ -48,7 +48,7 @@ To use `atprotoAuthProvider`, we need to update the `@adonisjs/auth` configurati
 import { defineConfig } from '@adonisjs/auth'
 - import { sessionGuard, sessionUserProvider } from '@adonisjs/auth/session'
 + import { sessionGuard } from '@adonisjs/auth/session'
-+ import { atprotoAuthProvider } from '@thisismissem/adonisjs-atproto-oauth/auth/provider'
++ import { atprotoAuthProvider } from '@adonisjs-atproto/oauth/auth/provider'
 
 const authConfig = defineConfig({
   default: 'web',
@@ -105,7 +105,7 @@ For example, if we wanted to add a method for fetching the users' profile from B
 
 ```ts
 // src/extensions.ts
-import { AtProtoUser } from '@thisismissem/adonisjs-atproto-oauth'
+import { AtProtoUser } from '@adonisjs-atproto/oauth'
 import * as lexicon from '#lexicons/index'
 
 AtProtoUser.macro('fetchProfile', async function hasProfile(this: AtProtoUser) {
@@ -118,7 +118,7 @@ AtProtoUser.macro('fetchProfile', async function hasProfile(this: AtProtoUser) {
   return undefined
 })
 
-declare module '@thisismissem/adonisjs-atproto-oauth' {
+declare module '@adonisjs-atproto/oauth' {
   interface AtProtoUser {
     fetchProfile(): Promise<undefined | lexicon.app.bsky.actor.profile.Main>
   }
@@ -142,7 +142,7 @@ export default class ExampleController {
 
 In the generated `app/controllers/oauth_controller.ts` file you'll notice that we have a `oauth` property on `HttpContext`. This is a lightweight wrapper around the `NodeOAuthClient` from `@atproto/oauth-client-node` which has methods integrated with Adonis.js
 
-You can see the full methods provide in [`OAuthContext`](https://github.com/ThisIsMissEm/adonisjs-atproto-oauth/blob/main/src/oauth_context.ts)
+You can see the full methods provide in [`OAuthContext`](https://github.com/adonisjs-atproto/oauth/blob/main/src/oauth_context.ts)
 
 ## Vine.js Validators
 
